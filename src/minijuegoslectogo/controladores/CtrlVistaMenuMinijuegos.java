@@ -5,6 +5,7 @@ import java.awt.event.ActionListener;
 import minijuegoslectogo.vistas.VistaMenuMinijuegos;
 import minijuegoslectogo.vistas.VistaMenuPrincipal;
 import minijuegoslectogo.vistas.VistaMiniAbecedario;
+import minijuegoslectogo.vistas.VistaMiniAhorcado;
 import minijuegoslectogo.vistas.VistaMiniImagenesYPalabras;
 import minijuegoslectogo.vistas.VistaMiniVocales;
 
@@ -46,6 +47,10 @@ public class CtrlVistaMenuMinijuegos implements ActionListener {
         }
 
         if (e.getSource() == objMMJ.btnAhorcado) {
+            VistaMiniAhorcado miniAhorcado = new VistaMiniAhorcado();
+            miniAhorcado.setVisible(true);
+            miniAhorcado.setLocation(500,200);
+            objMMJ.dispose();
         }
 
         if (e.getSource() == objMMJ.btnArrLasPal) {

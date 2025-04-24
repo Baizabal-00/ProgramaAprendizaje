@@ -18,7 +18,6 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         objCMVP = new CtrlVistaMenuPrincipal(this);
         objCI = new ColocadorImagenes();
         objCI.setImage(fondo, "src/minijuegoslectogo/assets/imagenes/Menus/Menus.png");
-        
     }
 
     /**

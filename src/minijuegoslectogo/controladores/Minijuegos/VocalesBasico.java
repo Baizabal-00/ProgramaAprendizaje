@@ -38,6 +38,11 @@ public class VocalesBasico implements Minijuegos{
         ptn = String.valueOf(ptnInt);
         objVista.labelPuntuacion.setText(ptn);
     }
+    
+    @Override
+    public void derrota() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
 
     public void setObjVista(VistaMiniVocales objVista) {
         this.objVista = objVista;

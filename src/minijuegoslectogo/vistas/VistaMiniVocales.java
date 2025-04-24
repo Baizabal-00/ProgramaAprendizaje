@@ -47,7 +47,6 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         btnLetraO = new javax.swing.JButton();
         btnLetraU = new javax.swing.JButton();
         btnLetraE = new javax.swing.JButton();
-        labelVocales = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         labelPuntuacion = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -63,44 +62,64 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
         btnLetraA.setBackground(new java.awt.Color(0, 36, 72));
         btnLetraA.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btnLetraA.setForeground(new java.awt.Color(255, 255, 255));
         btnLetraA.setBorder(null);
         btnLetraA.setContentAreaFilled(false);
         btnLetraA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        jPanel2.add(btnLetraA, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 9, 85, 85));
 
         btnLetraI.setBackground(new java.awt.Color(0, 96, 193));
         btnLetraI.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btnLetraI.setForeground(new java.awt.Color(255, 255, 255));
         btnLetraI.setContentAreaFilled(false);
-        jPanel2.add(btnLetraI, new org.netbeans.lib.awtextra.AbsoluteConstraints(188, 9, 85, 85));
 
         btnLetraO.setBackground(new java.awt.Color(0, 121, 242));
         btnLetraO.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btnLetraO.setForeground(new java.awt.Color(255, 255, 255));
         btnLetraO.setContentAreaFilled(false);
-        jPanel2.add(btnLetraO, new org.netbeans.lib.awtextra.AbsoluteConstraints(279, 9, 85, 85));
 
         btnLetraU.setBackground(new java.awt.Color(93, 174, 255));
         btnLetraU.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btnLetraU.setForeground(new java.awt.Color(255, 255, 255));
         btnLetraU.setContentAreaFilled(false);
-        jPanel2.add(btnLetraU, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 9, 85, 85));
 
         btnLetraE.setBackground(new java.awt.Color(0, 81, 164));
         btnLetraE.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         btnLetraE.setForeground(new java.awt.Color(255, 255, 255));
         btnLetraE.setContentAreaFilled(false);
-        jPanel2.add(btnLetraE, new org.netbeans.lib.awtextra.AbsoluteConstraints(97, 9, 85, 85));
 
-        labelVocales.setText("jLabel2");
-        jPanel2.add(labelVocales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 460, 100));
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(6, 6, 6)
+                .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(btnLetraE, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(btnLetraI, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(btnLetraO, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(6, 6, 6)
+                .addComponent(btnLetraU, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(9, 9, 9)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraE, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraI, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraO, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLetraU, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 210, 460, 100));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 760, 240));
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -139,7 +158,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 340, 70));
 
         labelFondo.setText("jLabel2");
-        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 600, 320));
+        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -149,7 +168,9 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 140, Short.MAX_VALUE))
         );
 
         pack();
@@ -211,6 +232,5 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     private javax.swing.JLabel labelFondo;
     public javax.swing.JLabel labelInicio;
     public javax.swing.JLabel labelPuntuacion;
-    private javax.swing.JLabel labelVocales;
     // End of variables declaration//GEN-END:variables
 }
