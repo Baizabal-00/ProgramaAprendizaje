@@ -4,8 +4,7 @@
  */
 package minijuegoslectogo.vistas;
 
-import javax.swing.Timer;
-import minijuegoslectogo.controladores.ColocadorImagenes;
+import javax.crypto.AEADBadTagException;
 import minijuegoslectogo.controladores.CtrlVistaMiniVocales;
 
 /**
@@ -13,22 +12,15 @@ import minijuegoslectogo.controladores.CtrlVistaMiniVocales;
  * @author Baiza
  */
 public class VistaMiniVocales extends javax.swing.JFrame {
-    
-    private CtrlVistaMiniVocales objControlador;
-    private ColocadorImagenes objCI;
-    //public Timer tiempo;
 
+    CtrlVistaMiniVocales ctrlVocales;
+    
+    /**
+     * Creates new form VistaMiniVocales2
+     */
     public VistaMiniVocales() {
         initComponents();
-        objControlador = new CtrlVistaMiniVocales(this);
-        objCI = new  ColocadorImagenes();
-        objCI.setImage(labelFondo, "src/minijuegoslectogo/assets/imagenes/vocales/VocalesFondo.png");
-        objCI.setImage(labelVocales, "src/minijuegoslectogo/assets/imagenes/vocales/Vocales.png");
-        objCI.setImage(labelInicio, "src/minijuegoslectogo/assets/imagenes/vocales/Iniciar.png");
-        objCI.setImage(jLabel1, "src/minijuegoslectogo/assets/imagenes/vocales/Puntuacion.png");
-        
-        //tiempo = new Timer(3000, null);
-        //tiempo.start();
+        ctrlVocales = new CtrlVistaMiniVocales(this);
     }
 
     /**
@@ -41,124 +33,75 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
-        btnLetraA = new javax.swing.JButton();
-        btnLetraI = new javax.swing.JButton();
-        btnLetraO = new javax.swing.JButton();
-        btnLetraU = new javax.swing.JButton();
-        btnLetraE = new javax.swing.JButton();
-        jPanel3 = new javax.swing.JPanel();
         labelPuntuacion = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        btnIniciar = new javax.swing.JButton();
-        btnRepetir = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        labelInicio = new javax.swing.JLabel();
-        labelFondo = new javax.swing.JLabel();
+        btnAyuda = new javax.swing.JButton();
+        btnRepetir = new javax.swing.JButton();
+        btnIniciar = new javax.swing.JButton();
+        btnLetraU = new javax.swing.JButton();
+        btnLetraO = new javax.swing.JButton();
+        btnLetraI = new javax.swing.JButton();
+        btnLetraE = new javax.swing.JButton();
+        btnLetraA = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 204));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnLetraA.setBackground(new java.awt.Color(0, 36, 72));
-        btnLetraA.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btnLetraA.setForeground(new java.awt.Color(255, 255, 255));
+        labelPuntuacion.setFont(new java.awt.Font("Impact", 1, 48)); // NOI18N
+        labelPuntuacion.setForeground(new java.awt.Color(255, 51, 51));
+        labelPuntuacion.setText("00");
+        jPanel1.add(labelPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 130, 120, 80));
+
+        btnSalir.setToolTipText("");
+        btnSalir.setBorder(null);
+        btnSalir.setContentAreaFilled(false);
+        btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 420, 220, 90));
+
+        btnAyuda.setBorder(null);
+        btnAyuda.setContentAreaFilled(false);
+        btnAyuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 40, 90, 90));
+
+        btnRepetir.setBorder(null);
+        btnRepetir.setContentAreaFilled(false);
+        btnRepetir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnRepetir, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 50, 100, 90));
+
+        btnIniciar.setBorder(null);
+        btnIniciar.setContentAreaFilled(false);
+        btnIniciar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 420, 280, 90));
+
+        btnLetraU.setBorder(null);
+        btnLetraU.setContentAreaFilled(false);
+        btnLetraU.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnLetraU, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 100, 110));
+
+        btnLetraO.setBorder(null);
+        btnLetraO.setContentAreaFilled(false);
+        btnLetraO.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnLetraO, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 110, 110));
+
+        btnLetraI.setBorder(null);
+        btnLetraI.setContentAreaFilled(false);
+        btnLetraI.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnLetraI, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 100, 110));
+
+        btnLetraE.setBorder(null);
+        btnLetraE.setContentAreaFilled(false);
+        btnLetraE.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnLetraE, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 280, 110, 110));
+
         btnLetraA.setBorder(null);
         btnLetraA.setContentAreaFilled(false);
         btnLetraA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnLetraA, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 280, 100, 110));
 
-        btnLetraI.setBackground(new java.awt.Color(0, 96, 193));
-        btnLetraI.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btnLetraI.setForeground(new java.awt.Color(255, 255, 255));
-        btnLetraI.setContentAreaFilled(false);
-
-        btnLetraO.setBackground(new java.awt.Color(0, 121, 242));
-        btnLetraO.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btnLetraO.setForeground(new java.awt.Color(255, 255, 255));
-        btnLetraO.setContentAreaFilled(false);
-
-        btnLetraU.setBackground(new java.awt.Color(93, 174, 255));
-        btnLetraU.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btnLetraU.setForeground(new java.awt.Color(255, 255, 255));
-        btnLetraU.setContentAreaFilled(false);
-
-        btnLetraE.setBackground(new java.awt.Color(0, 81, 164));
-        btnLetraE.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        btnLetraE.setForeground(new java.awt.Color(255, 255, 255));
-        btnLetraE.setContentAreaFilled(false);
-
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(6, 6, 6)
-                .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(btnLetraE, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(btnLetraI, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(btnLetraO, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(6, 6, 6)
-                .addComponent(btnLetraU, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(9, 9, 9)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnLetraA, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLetraE, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLetraI, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLetraO, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnLetraU, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 760, 240));
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        labelPuntuacion.setFont(new java.awt.Font("Impact", 1, 36)); // NOI18N
-        labelPuntuacion.setForeground(new java.awt.Color(220, 192, 34));
-        labelPuntuacion.setText("00");
-        jPanel3.add(labelPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 7, 63, 42));
-
-        jLabel1.setFont(new java.awt.Font("Impact", 1, 24)); // NOI18N
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-4, -4, 220, 80));
-
-        jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 74));
-
-        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        btnIniciar.setFont(new java.awt.Font("Impact", 1, 18)); // NOI18N
-        btnIniciar.setContentAreaFilled(false);
-        btnIniciar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnIniciarActionPerformed(evt);
-            }
-        });
-        jPanel4.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 10, 160, 50));
-
-        btnRepetir.setContentAreaFilled(false);
-        jPanel4.add(btnRepetir, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 6, 63, 62));
-
-        btnSalir.setFont(new java.awt.Font("Impact", 1, 18)); // NOI18N
-        btnSalir.setContentAreaFilled(false);
-        jPanel4.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 10, 80, 50));
-
-        labelInicio.setText("jLabel2");
-        jPanel4.add(labelInicio, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 340, 70));
-
-        jPanel1.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 340, 70));
-
-        labelFondo.setText("jLabel2");
-        jPanel1.add(labelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 500));
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minijuegoslectogo/assets/imagenes/Minijuegos/vocales.png"))); // NOI18N
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -168,17 +111,11 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 140, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void btnIniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniciarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnIniciarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -206,6 +143,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(VistaMiniVocales.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -216,6 +154,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton btnAyuda;
     public javax.swing.JButton btnIniciar;
     public javax.swing.JButton btnLetraA;
     public javax.swing.JButton btnLetraE;
@@ -225,12 +164,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     public javax.swing.JButton btnRepetir;
     public javax.swing.JButton btnSalir;
     private javax.swing.JLabel jLabel1;
-    public javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JLabel labelFondo;
-    public javax.swing.JLabel labelInicio;
+    private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel labelPuntuacion;
     // End of variables declaration//GEN-END:variables
 }

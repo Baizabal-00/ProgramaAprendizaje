@@ -47,7 +47,6 @@ public class CtrlVistaMiniVocales implements ActionListener {
             verify = true;
             verifyInit = true;
             if(c == 1){
-            objCI.setImage(objVista.labelInicio, "src/minijuegoslectogo/assets/imagenes/vocales/ReIniciar.png");
             c=2;
             }
             objVista.labelPuntuacion.setText("00");
@@ -91,8 +90,9 @@ public class CtrlVistaMiniVocales implements ActionListener {
 
                 }
             }
-            if (verify && verify2 == true) {
+            if (verify == true && verify2 == true) {
                 objBasico.puntuacion();
+                
             }
 
         }
@@ -104,9 +104,11 @@ public class CtrlVistaMiniVocales implements ActionListener {
     public void verificarBasic(String letra) {
         if (basic == true) {
             if (letra == actual) {
+                objBasico.reproducirSonidoAsync("coin");
                 verify = true;
                 verify2 = true;
             } else {
+                objBasico.reproducirSonidoAsync("Error");
                 verify = true;
                 objVista.labelPuntuacion.setText("00");
             }
