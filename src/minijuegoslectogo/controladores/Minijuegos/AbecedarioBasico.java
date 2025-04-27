@@ -37,6 +37,11 @@ public class AbecedarioBasico implements Minijuegos{
         objVista.labelPuntuacion.setText(ptn);
     }
 
+    @Override
+    public void derrota() {
+        
+    }
+    
     public void setObjVista(VistaMiniAbecedario objVista) {
         this.objVista = objVista;
     }

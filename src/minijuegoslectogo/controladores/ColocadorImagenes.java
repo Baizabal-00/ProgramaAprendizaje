@@ -13,8 +13,7 @@ public class ColocadorImagenes {
         ImageIcon image = new ImageIcon(ruta);
         Icon icon = new ImageIcon(
         image.getImage().getScaledInstance(label.getWidth(), label.getHeight(), Image.SCALE_DEFAULT));
-        label.setIcon(icon);
-             
+        label.setIcon(icon);     
     }
     
 }

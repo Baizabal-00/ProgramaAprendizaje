@@ -8,7 +8,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Random;
 import minijuegoslectogo.controladores.ColocadorImagenes;
-import minijuegoslectogo.vistas.VistaMiniImagenesYPalabras;
+import minijuegoslectogo.controladores.CtrlAudios;
+import minijuegoslectogo.vistas.VistaMiniImagenesYPalabra;
 
 public class ImagenesYPalabras implements Minijuegos, MinijuegosImagenes {
 
@@ -19,15 +20,16 @@ public class ImagenesYPalabras implements Minijuegos, MinijuegosImagenes {
     private Random random;
     private String palabraActual;
     private ArrayList<String> palabrasActuales, Palabras;
-    private VistaMiniImagenesYPalabras objIYP;
+    private VistaMiniImagenesYPalabra objIYP;
     private ColocadorImagenes objCI;
     private int ptnInt;
     private String ptn;
+    private CtrlAudios ctrlAudio;
 
     public ImagenesYPalabras() {
         objCI = new ColocadorImagenes();
-
         random = new Random();
+        ctrlAudio = new CtrlAudios();
     }
 
     @Override
@@ -84,7 +86,7 @@ public class ImagenesYPalabras implements Minijuegos, MinijuegosImagenes {
         objCI.setImage(objIYP.Imagenes, "src/minijuegoslectogo/assets/imagenes/hogar/" + palabraActual + ".png");
     }
 
-    public void setObjIYP(VistaMiniImagenesYPalabras objIYP) {
+    public void setObjIYP(VistaMiniImagenesYPalabra objIYP) {
         this.objIYP = objIYP;
     }
 
@@ -94,6 +96,11 @@ public class ImagenesYPalabras implements Minijuegos, MinijuegosImagenes {
 
     public ArrayList<String> getPalabras() {
         return Palabras;
+    }
+
+    @Override
+    public void derrota() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 
 }

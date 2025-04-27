@@ -6,7 +6,7 @@ import minijuegoslectogo.vistas.VistaMenuMinijuegos;
 import minijuegoslectogo.vistas.VistaMenuPrincipal;
 import minijuegoslectogo.vistas.VistaMiniAbecedario;
 import minijuegoslectogo.vistas.VistaMiniAhorcado;
-import minijuegoslectogo.vistas.VistaMiniImagenesYPalabras;
+import minijuegoslectogo.vistas.VistaMiniImagenesYPalabra;
 import minijuegoslectogo.vistas.VistaMiniVocales;
 
 public class CtrlVistaMenuMinijuegos implements ActionListener {
@@ -20,10 +20,7 @@ public class CtrlVistaMenuMinijuegos implements ActionListener {
         objMMJ.btnVocales.addActionListener(this);
         objMMJ.btnAbecedario.addActionListener(this);
         objMMJ.btnAhorcado.addActionListener(this);
-        objMMJ.btnArrLasPal.addActionListener(this);
-        objMMJ.btnCompletaLasOraciones.addActionListener(this);
-        objMMJ.btnMelissa.addActionListener(this);
-        objMMJ.btnMeliza.addActionListener(this);
+        objMMJ.btnOrdYGan.addActionListener(this);
         objMMJ.btnImagenesYPalabras.addActionListener(this);
         objMMJ.btnSalir.addActionListener(this);
      
@@ -53,23 +50,14 @@ public class CtrlVistaMenuMinijuegos implements ActionListener {
             objMMJ.dispose();
         }
 
-        if (e.getSource() == objMMJ.btnArrLasPal) {
-        }
-
-        if (e.getSource() == objMMJ.btnCompletaLasOraciones) {
+        if (e.getSource() == objMMJ.btnOrdYGan) {
         }
 
         if (e.getSource() == objMMJ.btnImagenesYPalabras) {
-            VistaMiniImagenesYPalabras miniImYpa = new VistaMiniImagenesYPalabras();
+            VistaMiniImagenesYPalabra miniImYpa = new VistaMiniImagenesYPalabra();
             miniImYpa.setVisible(true);
             miniImYpa.setLocation(500, 200);
             objMMJ.dispose();
-        }
-
-        if (e.getSource() == objMMJ.btnMelissa) {
-        }
-
-        if (e.getSource() == objMMJ.btnMeliza) {
         }
 
         if (e.getSource() == objMMJ.btnSalir) {

@@ -1,23 +1,22 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package minijuegoslectogo.vistas;
 
-import minijuegoslectogo.controladores.ColocadorImagenes;
 import minijuegoslectogo.controladores.CtrlVistaMenuMinijuegos;
+
 /**
  *
  * @author Baiza
  */
 public class VistaMenuMinijuegos extends javax.swing.JFrame {
-    
-    private CtrlVistaMenuMinijuegos objCMVP;
-    private ColocadorImagenes objCI;
-    
+
+    private CtrlVistaMenuMinijuegos objMunu;
     
     public VistaMenuMinijuegos() {
         initComponents();
-        objCMVP = new CtrlVistaMenuMinijuegos(this);
-        objCI = new ColocadorImagenes();
-        objCI.setImage(fondo, "src/minijuegoslectogo/assets/imagenes/Menus/MenuMinijuegos.png");
-        
+        objMunu = new CtrlVistaMenuMinijuegos(this);
     }
 
     /**
@@ -29,88 +28,136 @@ public class VistaMenuMinijuegos extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fondoMenu = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        jButton19 = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
-        btnAbecedario = new javax.swing.JButton();
-        btnVocales = new javax.swing.JButton();
-        btnArrLasPal = new javax.swing.JButton();
-        btnMeliza = new javax.swing.JButton();
-        btnMelissa = new javax.swing.JButton();
+        jButton17 = new javax.swing.JButton();
+        btnDictado = new javax.swing.JButton();
+        jButton15 = new javax.swing.JButton();
+        btnOperOcult = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
+        btnOrdYGan = new javax.swing.JButton();
+        jButton5 = new javax.swing.JButton();
+        jButton11 = new javax.swing.JButton();
+        btnPalOcult = new javax.swing.JButton();
+        jButton9 = new javax.swing.JButton();
         btnAhorcado = new javax.swing.JButton();
+        jButton7 = new javax.swing.JButton();
         btnImagenesYPalabras = new javax.swing.JButton();
-        btnCompletaLasOraciones = new javax.swing.JButton();
-        fondo = new javax.swing.JLabel();
+        btnAbecedario = new javax.swing.JButton();
+        jButton4 = new javax.swing.JButton();
+        btnAyuda = new javax.swing.JButton();
+        btnVocales = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        fondoMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton19.setText("jButton2");
+        jButton19.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton19, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 480, 50, 60));
 
         btnSalir.setBorder(null);
-        btnSalir.setBorderPainted(false);
         btnSalir.setContentAreaFilled(false);
         btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 550, 180, 80));
+        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 480, 140, 60));
 
-        btnAbecedario.setBorder(null);
-        btnAbecedario.setBorderPainted(false);
-        btnAbecedario.setContentAreaFilled(false);
-        btnAbecedario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnAbecedario, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 210, 190, 70));
+        jButton17.setText("jButton2");
+        jButton17.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton17, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 390, 50, 60));
 
-        btnVocales.setBorder(null);
-        btnVocales.setBorderPainted(false);
-        btnVocales.setContentAreaFilled(false);
-        btnVocales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnVocales, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 80, 190, 70));
+        btnDictado.setBorder(null);
+        btnDictado.setContentAreaFilled(false);
+        btnDictado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnDictado, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 390, 180, 60));
 
-        btnArrLasPal.setBorder(null);
-        btnArrLasPal.setBorderPainted(false);
-        btnArrLasPal.setContentAreaFilled(false);
-        btnArrLasPal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnArrLasPal, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 330, 190, 70));
+        jButton15.setText("jButton2");
+        jButton15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton15, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 310, 50, 60));
 
-        btnMeliza.setBorder(null);
-        btnMeliza.setBorderPainted(false);
-        btnMeliza.setContentAreaFilled(false);
-        btnMeliza.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnMeliza, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 460, 190, 70));
+        btnOperOcult.setBorder(null);
+        btnOperOcult.setContentAreaFilled(false);
+        btnOperOcult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnOperOcult, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 310, 180, 60));
 
-        btnMelissa.setBorder(null);
-        btnMelissa.setBorderPainted(false);
-        btnMelissa.setContentAreaFilled(false);
-        btnMelissa.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnMelissa, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 460, 190, 70));
+        jButton13.setText("jButton2");
+        jButton13.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 240, 50, 60));
 
+        btnOrdYGan.setBorder(null);
+        btnOrdYGan.setContentAreaFilled(false);
+        btnOrdYGan.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnOrdYGan, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 240, 180, 60));
+
+        jButton5.setText("jButton2");
+        jButton5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 240, 50, 60));
+
+        jButton11.setText("jButton2");
+        jButton11.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, 50, 60));
+
+        btnPalOcult.setBorder(null);
+        btnPalOcult.setContentAreaFilled(false);
+        btnPalOcult.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnPalOcult, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 170, 180, 60));
+
+        jButton9.setText("jButton2");
+        jButton9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, 50, 60));
+
+        btnAhorcado.setToolTipText("");
         btnAhorcado.setBorder(null);
-        btnAhorcado.setBorderPainted(false);
         btnAhorcado.setContentAreaFilled(false);
         btnAhorcado.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnAhorcado, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 210, 190, 70));
+        jPanel1.add(btnAhorcado, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, 180, 60));
+
+        jButton7.setText("jButton2");
+        jButton7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 310, 50, 60));
 
         btnImagenesYPalabras.setBorder(null);
-        btnImagenesYPalabras.setBorderPainted(false);
         btnImagenesYPalabras.setContentAreaFilled(false);
         btnImagenesYPalabras.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnImagenesYPalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 190, 70));
+        jPanel1.add(btnImagenesYPalabras, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 310, 180, 60));
 
-        btnCompletaLasOraciones.setBorder(null);
-        btnCompletaLasOraciones.setBorderPainted(false);
-        btnCompletaLasOraciones.setContentAreaFilled(false);
-        btnCompletaLasOraciones.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnCompletaLasOraciones, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 190, 70));
-        fondoMenu.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 700));
+        btnAbecedario.setBorder(null);
+        btnAbecedario.setContentAreaFilled(false);
+        btnAbecedario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnAbecedario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 240, 180, 60));
+
+        jButton4.setText("jButton2");
+        jButton4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 70, 50, 60));
+
+        btnAyuda.setText("jButton2");
+        btnAyuda.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnAyuda, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 50, 60));
+
+        btnVocales.setBorder(null);
+        btnVocales.setContentAreaFilled(false);
+        btnVocales.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(btnVocales, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 180, 60));
+
+        jButton2.setText("jButton2");
+        jButton2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 170, 50, 60));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minijuegoslectogo/assets/imagenes/Menus/MenuJuego.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(fondoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -143,8 +190,6 @@ public class VistaMenuMinijuegos extends javax.swing.JFrame {
         }
         //</editor-fold>
         //</editor-fold>
-        //</editor-fold>
-        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -157,14 +202,25 @@ public class VistaMenuMinijuegos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnAbecedario;
     public javax.swing.JButton btnAhorcado;
-    public javax.swing.JButton btnArrLasPal;
-    public javax.swing.JButton btnCompletaLasOraciones;
+    public javax.swing.JButton btnAyuda;
+    public javax.swing.JButton btnDictado;
     public javax.swing.JButton btnImagenesYPalabras;
-    public javax.swing.JButton btnMelissa;
-    public javax.swing.JButton btnMeliza;
+    public javax.swing.JButton btnOperOcult;
+    public javax.swing.JButton btnOrdYGan;
+    public javax.swing.JButton btnPalOcult;
     public javax.swing.JButton btnSalir;
     public javax.swing.JButton btnVocales;
-    private javax.swing.JLabel fondo;
-    public javax.swing.JPanel fondoMenu;
+    public javax.swing.JButton jButton11;
+    public javax.swing.JButton jButton13;
+    public javax.swing.JButton jButton15;
+    public javax.swing.JButton jButton17;
+    public javax.swing.JButton jButton19;
+    public javax.swing.JButton jButton2;
+    public javax.swing.JButton jButton4;
+    public javax.swing.JButton jButton5;
+    public javax.swing.JButton jButton7;
+    public javax.swing.JButton jButton9;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -5,18 +5,20 @@ import java.awt.event.ActionListener;
 import java.util.ArrayList;
 import minijuegoslectogo.controladores.Minijuegos.ImagenesYPalabras;
 import minijuegoslectogo.vistas.VistaMenuMinijuegos;
-import minijuegoslectogo.vistas.VistaMiniImagenesYPalabras;
+import minijuegoslectogo.vistas.VistaMiniImagenesYPalabra;
 
 public class CtrlVistaImagenesYPalabras implements ActionListener {
 
     private ColocadorImagenes colocador;
-    private VistaMiniImagenesYPalabras objVistaIYP;
+    private VistaMiniImagenesYPalabra objVistaIYP;
     private ImagenesYPalabras objMiniIYP;
     private ArrayList palabras;
     private VistaMenuMinijuegos objVMJ;
     private boolean basic = true, verify, verify2, verifyInit;
+    private ThreadAudios objTh;
+    private CtrlAudios objAudi;
 
-    public CtrlVistaImagenesYPalabras(VistaMiniImagenesYPalabras objVistaIYP) {
+    public CtrlVistaImagenesYPalabras(VistaMiniImagenesYPalabra objVistaIYP) {
         this.objVistaIYP = objVistaIYP;
         objVistaIYP.btnOpcionA.addActionListener(this);
         objVistaIYP.btnOpcionB.addActionListener(this);
@@ -28,6 +30,9 @@ public class CtrlVistaImagenesYPalabras implements ActionListener {
         objMiniIYP = new ImagenesYPalabras();
         objMiniIYP.setObjIYP(objVistaIYP);
         palabras = new ArrayList();
+        objAudi = new CtrlAudios();
+        objTh = new ThreadAudios();
+        objTh.setCtrlAudio(objAudi);
 
     }
 
@@ -83,9 +88,11 @@ public class CtrlVistaImagenesYPalabras implements ActionListener {
             if (palabra.equals(objMiniIYP.getPalabraActual())) {
                 verify = true;
                 verify2 = true;
+                objTh.reproducirSonidoAsync("coin");
             } else {
                 verify = true;
                 objVistaIYP.labelPuntuacion.setText("00");
+                objTh.reproducirSonidoAsync("wind");
             }
         }
 

@@ -33,6 +33,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        cronometroLabel = new javax.swing.JLabel();
         labelPuntuacion = new javax.swing.JLabel();
         btnSalir = new javax.swing.JButton();
         btnAyuda = new javax.swing.JButton();
@@ -48,6 +49,12 @@ public class VistaMiniVocales extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cronometroLabel.setFont(new java.awt.Font("Impact", 1, 48)); // NOI18N
+        cronometroLabel.setForeground(new java.awt.Color(255, 51, 51));
+        cronometroLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cronometroLabel.setText("00");
+        jPanel1.add(cronometroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 110, 60));
 
         labelPuntuacion.setFont(new java.awt.Font("Impact", 1, 48)); // NOI18N
         labelPuntuacion.setForeground(new java.awt.Color(255, 51, 51));
@@ -163,6 +170,7 @@ public class VistaMiniVocales extends javax.swing.JFrame {
     public javax.swing.JButton btnLetraU;
     public javax.swing.JButton btnRepetir;
     public javax.swing.JButton btnSalir;
+    public javax.swing.JLabel cronometroLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel labelPuntuacion;

@@ -3,6 +3,8 @@ package minijuegoslectogo.controladores.Minijuegos;
 import Modelos.Minijuegos;
 import minijuegoslectogo.controladores.CtrlAudios;
 import java.util.Random;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 import minijuegoslectogo.vistas.VistaMiniVocales;
 
 public class VocalesBasico implements Minijuegos {
@@ -18,6 +20,7 @@ public class VocalesBasico implements Minijuegos {
     public VocalesBasico() {
         ctrlAudio = new CtrlAudios();
         random = new Random();
+        
     }
 
     @Override
@@ -37,18 +40,6 @@ public class VocalesBasico implements Minijuegos {
         ptn = String.valueOf(ptnInt);
         objVista.labelPuntuacion.setText(ptn);
 
-    }
-
-    public void reproducirSonidoAsync(String actual) {
-        new Thread(() -> {
-            try {
-                    ctrlAudio.reproducirAudio_mp3("src/minijuegoslectogo/assets/sonidos/" + actual + ".mp3");
-                
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        }).start();
     }
 
     @Override
