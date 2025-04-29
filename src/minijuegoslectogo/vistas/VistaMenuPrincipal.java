@@ -1,6 +1,9 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
+ */
 package minijuegoslectogo.vistas;
 
-import minijuegoslectogo.controladores.ColocadorImagenes;
 import minijuegoslectogo.controladores.CtrlVistaMenuPrincipal;
 
 /**
@@ -8,16 +11,11 @@ import minijuegoslectogo.controladores.CtrlVistaMenuPrincipal;
  * @author Baiza
  */
 public class VistaMenuPrincipal extends javax.swing.JFrame {
-    
-    private CtrlVistaMenuPrincipal objCMVP;
-    private ColocadorImagenes objCI;
-    
-    
+
+    private CtrlVistaMenuPrincipal objMenu;
     public VistaMenuPrincipal() {
         initComponents();
-        objCMVP = new CtrlVistaMenuPrincipal(this);
-        objCI = new ColocadorImagenes();
-        objCI.setImage(fondo, "src/minijuegoslectogo/assets/imagenes/Menus/Menus.png");
+        objMenu = new  CtrlVistaMenuPrincipal(this);
     }
 
     /**
@@ -29,7 +27,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        fondoMenu = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         btnSonidoSalir = new javax.swing.JButton();
         btnSonidoPuntuacion = new javax.swing.JButton();
         btnGuiaLarga = new javax.swing.JButton();
@@ -38,17 +36,17 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
         btnSalir = new javax.swing.JButton();
         btnPuntuacion = new javax.swing.JButton();
         btnMinijuegos = new javax.swing.JButton();
-        fondo = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        fondoMenu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btnSonidoSalir.setBorder(null);
         btnSonidoSalir.setBorderPainted(false);
         btnSonidoSalir.setContentAreaFilled(false);
         btnSonidoSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnSonidoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 440, 40, 50));
+        jPanel1.add(btnSonidoSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 450, 70, 80));
 
         btnSonidoPuntuacion.setBorder(null);
         btnSonidoPuntuacion.setBorderPainted(false);
@@ -59,56 +57,57 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
                 btnSonidoPuntuacionActionPerformed(evt);
             }
         });
-        fondoMenu.add(btnSonidoPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 330, 40, 50));
+        jPanel1.add(btnSonidoPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 330, 70, 80));
 
         btnGuiaLarga.setBorder(null);
         btnGuiaLarga.setBorderPainted(false);
         btnGuiaLarga.setContentAreaFilled(false);
         btnGuiaLarga.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnGuiaLarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 10, 50, 50));
+        jPanel1.add(btnGuiaLarga, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 50, 50));
 
         btnLectoGo.setBorder(null);
         btnLectoGo.setBorderPainted(false);
         btnLectoGo.setContentAreaFilled(false);
         btnLectoGo.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnLectoGo, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 120, 50, 50));
+        jPanel1.add(btnLectoGo, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 80, 50, 50));
 
         btnSonidoMinijuegos.setBorder(null);
         btnSonidoMinijuegos.setBorderPainted(false);
         btnSonidoMinijuegos.setContentAreaFilled(false);
         btnSonidoMinijuegos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnSonidoMinijuegos, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 40, 50));
+        jPanel1.add(btnSonidoMinijuegos, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 210, 70, 70));
 
         btnSalir.setBorder(null);
         btnSalir.setBorderPainted(false);
         btnSalir.setContentAreaFilled(false);
         btnSalir.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 420, 180, 80));
+        jPanel1.add(btnSalir, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 440, 290, 80));
 
         btnPuntuacion.setBorder(null);
         btnPuntuacion.setBorderPainted(false);
         btnPuntuacion.setContentAreaFilled(false);
         btnPuntuacion.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 310, 260, 80));
+        jPanel1.add(btnPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 330, 290, 80));
 
         btnMinijuegos.setBorder(null);
         btnMinijuegos.setBorderPainted(false);
         btnMinijuegos.setContentAreaFilled(false);
         btnMinijuegos.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        fondoMenu.add(btnMinijuegos, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 260, 80));
-        fondoMenu.add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 540, 700));
+        jPanel1.add(btnMinijuegos, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 200, 290, 80));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/minijuegoslectogo/assets/imagenes/Menus/MenU.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 760, 570));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(fondoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 540, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondoMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
@@ -163,7 +162,7 @@ public class VistaMenuPrincipal extends javax.swing.JFrame {
     public javax.swing.JButton btnSonidoMinijuegos;
     public javax.swing.JButton btnSonidoPuntuacion;
     public javax.swing.JButton btnSonidoSalir;
-    private javax.swing.JLabel fondo;
-    public javax.swing.JPanel fondoMenu;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -31,6 +31,7 @@ public class VistaMiniImagenesYPalabra extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         labelPuntuacion = new javax.swing.JLabel();
+        cronometroLabel = new javax.swing.JLabel();
         btnAyuda = new javax.swing.JButton();
         btnRepetirSonido = new javax.swing.JButton();
         btnSalir = new javax.swing.JButton();
@@ -51,6 +52,12 @@ public class VistaMiniImagenesYPalabra extends javax.swing.JFrame {
         labelPuntuacion.setForeground(new java.awt.Color(255, 51, 51));
         labelPuntuacion.setText("00");
         jPanel1.add(labelPuntuacion, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 50, 120, 70));
+
+        cronometroLabel.setFont(new java.awt.Font("Impact", 1, 48)); // NOI18N
+        cronometroLabel.setForeground(new java.awt.Color(255, 51, 51));
+        cronometroLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        cronometroLabel.setText("00");
+        jPanel1.add(cronometroLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 110, 60));
 
         btnAyuda.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         btnAyuda.setBorder(null);
@@ -96,7 +103,6 @@ public class VistaMiniImagenesYPalabra extends javax.swing.JFrame {
         jPanel1.add(btnOpcionB, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 380, 320, 80));
 
         btnOpcionA.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
-        btnOpcionA.setActionCommand("");
         btnOpcionA.setBorder(null);
         btnOpcionA.setContentAreaFilled(false);
         btnOpcionA.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
@@ -173,6 +179,7 @@ public class VistaMiniImagenesYPalabra extends javax.swing.JFrame {
     public javax.swing.JButton btnOpcionD;
     public javax.swing.JButton btnRepetirSonido;
     public javax.swing.JButton btnSalir;
+    public javax.swing.JLabel cronometroLabel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     public javax.swing.JLabel labelPuntuacion;

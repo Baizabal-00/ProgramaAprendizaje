@@ -2,6 +2,8 @@ package minijuegoslectogo.controladores;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import javax.swing.JOptionPane;
+import javax.swing.Timer;
 import minijuegoslectogo.controladores.Minijuegos.AbecedarioBasico;
 import minijuegoslectogo.vistas.VistaMenuMinijuegos;
 import minijuegoslectogo.vistas.VistaMiniAbecedario;
@@ -12,10 +14,12 @@ public class CtrlVistaMiniAbecedario implements ActionListener {
     private VistaMiniAbecedario objVista;
     private AbecedarioBasico objBasico;
     private String actual, ptn;
-    private int ptnInt;
-    private boolean verifyInit, verify, verify2, basic = true;
+    private int ptnInt, tiempoRestante;
+    private boolean verifyInit, verify, verify2, basic = true, ver4 = true, derrota = false;
     private CtrlAudios ctrlAudi;
     private VistaMenuMinijuegos objVMJ;
+    private ThreadAudios audiTh;
+    private Timer timer;
 
     public CtrlVistaMiniAbecedario(VistaMiniAbecedario objVista) {
         this.objVista = objVista;
@@ -52,6 +56,8 @@ public class CtrlVistaMiniAbecedario implements ActionListener {
         objBasico = new AbecedarioBasico();
         objBasico.setObjVista(objVista);
         ctrlAudi = new CtrlAudios();
+        audiTh = new ThreadAudios();
+        audiTh.setCtrlAudio(ctrlAudi);
     }
 
     @Override
@@ -68,117 +74,129 @@ public class CtrlVistaMiniAbecedario implements ActionListener {
             verify = true;
             verifyInit = true;
             objVista.labelPuntuacion.setText("00");
+            iniciarCronometro();
+            objVista.btnReiniciar.setEnabled(false);
+            ver4 = false;
+            objBasico.setTimer(timer);
         }
-        
-        if(e.getSource() == objVista.btnA){
+
+        if (e.getSource() == objVista.btnA) {
             verificar("A");
         }
-        
-        if(e.getSource() == objVista.btnB){
+
+        if (e.getSource() == objVista.btnB) {
             verificar("B");
         }
-        
-        if(e.getSource() == objVista.btnC){
+
+        if (e.getSource() == objVista.btnC) {
             verificar("C");
         }
-        
-        if(e.getSource() == objVista.btnD){
+
+        if (e.getSource() == objVista.btnD) {
             verificar("D");
         }
-        
-        if(e.getSource() == objVista.btnE){
+
+        if (e.getSource() == objVista.btnE) {
             verificar("E");
         }
-        
-        if(e.getSource() == objVista.btnF){
+
+        if (e.getSource() == objVista.btnF) {
             verificar("F");
         }
-        
-        if(e.getSource() == objVista.btnG){
+
+        if (e.getSource() == objVista.btnG) {
             verificar("G");
         }
-        
-        if(e.getSource() == objVista.btnH){
+
+        if (e.getSource() == objVista.btnH) {
             verificar("H");
         }
-        
-        if(e.getSource() == objVista.btnI){
+
+        if (e.getSource() == objVista.btnI) {
             verificar("I");
         }
-        
-        if(e.getSource() == objVista.btnJ){
+
+        if (e.getSource() == objVista.btnJ) {
             verificar("J");
         }
-        
-        if(e.getSource() == objVista.btnK){
+
+        if (e.getSource() == objVista.btnK) {
             verificar("K");
         }
-        
-        if(e.getSource() == objVista.btnL){
+
+        if (e.getSource() == objVista.btnL) {
             verificar("L");
         }
-        
-        if(e.getSource() == objVista.btnM){
+
+        if (e.getSource() == objVista.btnM) {
             verificar("M");
         }
-        
-        if(e.getSource() == objVista.btnN){
+
+        if (e.getSource() == objVista.btnN) {
             verificar("N");
         }
-        
-        if(e.getSource() == objVista.btnÑ){
+
+        if (e.getSource() == objVista.btnÑ) {
             verificar("Ñ");
         }
-        
-        if(e.getSource() == objVista.btnO){
+
+        if (e.getSource() == objVista.btnO) {
             verificar("O");
         }
-        
-        if(e.getSource() == objVista.btnP){
+
+        if (e.getSource() == objVista.btnP) {
             verificar("P");
         }
-        
-        if(e.getSource() == objVista.btnQ){
+
+        if (e.getSource() == objVista.btnQ) {
             verificar("Q");
         }
-        
-        if(e.getSource() == objVista.btnR){
+
+        if (e.getSource() == objVista.btnR) {
             verificar("R");
         }
-        
-        if(e.getSource() == objVista.btnS){
+
+        if (e.getSource() == objVista.btnS) {
             verificar("S");
         }
-        
-        if(e.getSource() == objVista.btnT){
+
+        if (e.getSource() == objVista.btnT) {
             verificar("T");
         }
-        
-        if(e.getSource() == objVista.btnU){
+
+        if (e.getSource() == objVista.btnU) {
             verificar("U");
         }
-        
-        if(e.getSource() == objVista.btnV){
+
+        if (e.getSource() == objVista.btnV) {
             verificar("V");
         }
-        
-        if(e.getSource() == objVista.btnW){
+
+        if (e.getSource() == objVista.btnW) {
             verificar("W");
         }
-        
-        if(e.getSource() == objVista.btnX){
+
+        if (e.getSource() == objVista.btnX) {
             verificar("X");
         }
-        
-        if(e.getSource() == objVista.btnY){
+
+        if (e.getSource() == objVista.btnY) {
             verificar("Y");
         }
-        
-        if(e.getSource() == objVista.btnZ){
+
+        if (e.getSource() == objVista.btnZ) {
             verificar("Z");
         }
+
+        if (e.getSource() == objVista.btnSalir) {
+            objVMJ = new VistaMenuMinijuegos();
+            objVMJ.setVisible(true);
+            objVMJ.setLocation(500, 30);
+            timer.stop();
+            objVista.dispose();
+        }
         
-        if(e.getSource() == objVista.btnSalir){
+        if (derrota == true) {
             objVMJ = new VistaMenuMinijuegos();
             objVMJ.setVisible(true);
             objVMJ.setLocation(500, 30);
@@ -204,16 +222,52 @@ public class CtrlVistaMiniAbecedario implements ActionListener {
     public void verificar(String letra) {
         if (basic == true) {
             if (letra == actual) {
+                audiTh.reproducirSonidoAsync("coin");
                 verify = true;
                 verify2 = true;
             } else {
+                audiTh.reproducirSonidoAsync("wind");
                 verify = true;
                 objVista.labelPuntuacion.setText("00");
+                if (ver4 == false) {
+                    
+                    
+                }
             }
         } else {
 
         }
 
+    }
+
+    public void iniciarCronometro() {
+        tiempoRestante = 60;
+        objVista.cronometroLabel.setText(String.valueOf(tiempoRestante));
+
+        timer = new Timer(1000, new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                tiempoRestante--;
+                objVista.cronometroLabel.setText(String.valueOf(tiempoRestante));
+
+                if (tiempoRestante <= 0) {
+                    timer.stop();
+
+                    String puntaje = objVista.labelPuntuacion.getText();
+                    JOptionPane.showMessageDialog(objVista, "¡Tiempo agotado!\nTu puntuación fue: " + puntaje);
+
+                    objVMJ = new VistaMenuMinijuegos();
+                    objVMJ.setVisible(true);
+                    objVMJ.setLocation(500, 30);
+                    objVista.dispose();
+                }
+            }
+        });
+
+        timer.start();
+    }
+
+    public Timer getTimer() {
+        return timer;
     }
 
 }

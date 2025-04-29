@@ -42,11 +42,6 @@ public class VocalesBasico implements Minijuegos {
 
     }
 
-    @Override
-    public void derrota() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
-
     public void setObjVista(VistaMiniVocales objVista) {
         this.objVista = objVista;
     }

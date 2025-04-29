@@ -11,8 +11,8 @@ public class CtrlVistaMenuPrincipal implements ActionListener {
     private VistaMenuMinijuegos objVMMJ;
     private CtrlAudios objAudio;
     private boolean v1 = false;
-    String rutaGuias = "src/minijuegoslectogo/assets/sonidos/guias/";
-
+    private String rutaGuias = "src/minijuegoslectogo/assets/sonidos/guias/";
+    private ThreadAudios audiTH;
     public CtrlVistaMenuPrincipal(VistaMenuPrincipal objMP) {
         this.objMP = objMP;
         objMP.btnMinijuegos.addActionListener(this);
@@ -24,6 +24,7 @@ public class CtrlVistaMenuPrincipal implements ActionListener {
         objMP.btnGuiaLarga.addActionListener(this);
         objMP.btnLectoGo.addActionListener(this);
         objAudio = new CtrlAudios();
+        audiTH = new ThreadAudios();
 
     }
 
@@ -31,7 +32,7 @@ public class CtrlVistaMenuPrincipal implements ActionListener {
     public void actionPerformed(ActionEvent e) {
 
         if (e.getSource() == objMP.btnGuiaLarga) {
-            objAudio.reproducirAudio_mp3(rutaGuias + "GuiaMenuPrincipal.mp3");
+            objAudio.reproducirAudio_mp3(rutaGuias + "AyudaMainMenu.mp3");
         }
 
         if (e.getSource() == objMP.btnLectoGo) {
@@ -66,6 +67,7 @@ public class CtrlVistaMenuPrincipal implements ActionListener {
 
         if (e.getSource() == objMP.btnSalir) {
             objMP.dispose();
+            audiTH.apagar();
         }
 
         if (v1 == true) {

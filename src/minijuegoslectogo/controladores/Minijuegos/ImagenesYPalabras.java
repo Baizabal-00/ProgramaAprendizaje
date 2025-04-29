@@ -98,9 +98,6 @@ public class ImagenesYPalabras implements Minijuegos, MinijuegosImagenes {
         return Palabras;
     }
 
-    @Override
-    public void derrota() {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    }
+  
 
 }

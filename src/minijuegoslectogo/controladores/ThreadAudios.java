@@ -27,6 +27,8 @@ public class ThreadAudios {
         this.ctrlAudio = ctrlAudio;
     }
     
-    
+    public void apagar(){
+        executor.shutdown();
+    }
 
 }

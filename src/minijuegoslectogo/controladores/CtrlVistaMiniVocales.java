@@ -86,6 +86,9 @@ public class CtrlVistaMiniVocales implements ActionListener {
             objVMJ = new VistaMenuMinijuegos();
             objVMJ.setVisible(true);
             objVMJ.setLocation(500, 30);
+            if(c==2){
+            timer.stop();
+            }
             objVista.dispose();
 
         }
@@ -143,11 +146,11 @@ public class CtrlVistaMiniVocales implements ActionListener {
                 objVista.btnIniciar.setEnabled(false);
                 objVista.btnRepetir.setEnabled(false);
 
-                // Mostrar puntuación
-                String puntaje = objVista.labelPuntuacion.getText(); // ya está como texto
+               
+                String puntaje = objVista.labelPuntuacion.getText(); 
                 JOptionPane.showMessageDialog(objVista, "¡Tiempo agotado!\nTu puntuación fue: " + puntaje);
 
-                // Volver al menú
+                
                 objVMJ = new VistaMenuMinijuegos();
                 objVMJ.setVisible(true);
                 objVMJ.setLocation(500, 30);

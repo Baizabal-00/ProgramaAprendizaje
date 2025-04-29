@@ -6,6 +6,6 @@ public interface Minijuegos {
     
     public void puntuacion();
     
-    public void derrota();
+   
     
 }
